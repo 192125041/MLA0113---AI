@@ -1,0 +1,21 @@
+import itertools
+k=[]
+n=int(input("enter num: "))
+m=list(range(1,n+1))
+c=list(itertools.permutations(m))
+for i in c:
+  s=0
+  for j in range(len(i)-1):
+      l=i[j]-i[j+1]
+      if(l==1 or l==-1):
+        s=1                 
+  if(s==0):
+    k.append(i)
+    break
+for h in k[0]:
+   for j in range(1,n+1):
+      if h==j:
+        print('Q',end=" ")
+      else:
+         print('-',end=" ")
+   print()
